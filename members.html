@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mihall's Cleaning Association</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <style>
+        @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+        body {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(background.jpg) no-repeat center;
+          background-size: cover;
+
+        }
+        ::-webkit-scrollbar {
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #563d2d;
+          border-radius: 25px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: saddlebrown;
+        }
+        .container {
+          display: flex;
+          gap: 12px;
+          max-width: 400px;
+          width: 100%;
+          background: #563d2d;
+          border-radius: 12px;
+          padding: 30px;
+          scroll-snap-type: x mandatory;
+          overflow-x: scroll;
+          scroll-padding: 30px;
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+          animation: fadeIn 2s ease-in-out;
+        }
+        .container .card {
+          display: flex;
+          flex: 0 0 100%;
+          flex-direction: column;
+          align-items: center;
+          padding: 30px;
+          border-radius: 12px;
+          background: #fff;
+          scroll-snap-align: start;
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+        .card .image {
+          height: 150px;
+          width: 150px;
+          padding: 4px;
+          background: #563d2d;
+          border-radius: 50%;
+        }
+        .image img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 5px solid #fff;
+        }
+        .card h2 {
+          margin-top: 25px;
+          color: #333;
+          font-size: 22px;
+          font-weight: 600;
+        }
+        .card p {
+          margin-top: 4px;
+          font-size: 18px;
+          font-weight: 400;
+          color: #333;
+          text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="index.html">Mihall's Cleaning Association<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="card">
+        <div class="image">
+          <img src="img1.jpg" alt="Jacob" />
+        </div>
+        <h2>Jacob C. Lumbong</h2>
+        <p>The CEO of Mihall's Cleaning Association.</p>
+      </div>
+      <div class="card">
+        <div class="image">
+         <img src="img2.jpg" alt="Dylan" />
+        </div>
+        <h2>Dylan Samuel D. Pineda</h2>
+        <p>The Assistant Director of Mihall's Cleaning Association.</p>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="img3.jpg" alt="Leana" />
+        </div>
+        <h2>J'Leana Rozenni Merto</h2>
+        <p>The Finance of Mihall's Cleaning Association.</p>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="img4.jpg" alt="Gio" />
+        </div>
+        <h2>Gio Rebollido</h2>
+        <p>The Business Manager of Mihall's Cleaning Association.</p>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="img5.jpg" alt="Nur" />
+        </div>
+        <h2>Nur Princess P. Polea</h2>
+        <p>The Business Manager of Mihall's Cleaning Association.</p>
+      </div>
+    </section>
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+  </body>
+</html>

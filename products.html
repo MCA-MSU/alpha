@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>Mihall's Cleaning Association</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    #about {
+      background-color: #F4E4C9;
+      margin-top: 100px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 20px 10px;
+      border-radius: 15px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    button {
+      background: #fff;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+    button:hover {
+  color: #fff;
+  background: #C06B3E;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Mihall's Cleaning Association<span>.</span></a>
+      <ul class="menu-links">
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+      <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2 style="color: #666;">Our Services</h2>
+      <br/>
+      <div class="service">
+        <h3>Regular House Cleaning</h3>
+        <p>Our regular house cleaning service includes dusting, vacuuming, mopping, and sanitizing various surfaces to keep your home clean and fresh.</p>
+      </div>
+      <br/>
+      <div class="service">
+        <h3>Deep Cleaning</h3>
+        <p>Our deep cleaning service is perfect for thorough cleaning of your entire home, including hard-to-reach areas, ensuring every nook and cranny is spotless.</p>
+      </div>
+      <br/>
+      <div class="service">
+        <h3>Carpet Cleaning</h3>
+        <p>We use professional-grade equipment and eco-friendly products to deep clean your carpets, removing stains, dirt, and allergens, and leaving them looking brand-new.</p>
+      </div>
+      <br/>
+      <div class="service">
+        <h3>Window Washing</h3>
+        <p>Our window washing service includes cleaning both the interior and exterior of your windows to remove dirt, grime, and streaks, giving you sparkling clean windows.</p>
+      </div>
+      <br/>
+      <div class="service">
+        <h3>Office Janitorial Services</h3>
+        <p>We offer comprehensive janitorial services for offices and commercial spaces, including regular cleaning, restroom maintenance, and waste disposal, to ensure a clean and hygienic workplace environment.</p>
+        <br>
+        <a href="booking.html">
+          <button>Book Now</button>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+</body>
+</html>
